@@ -16,7 +16,7 @@ jobs:
         repository: mosama90/one
     - name: LS
       run: |
-        ls -la
+        mv /home/runner/work/one/one /home/runner/work/one/source
         pwd
  
 
