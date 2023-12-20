@@ -6,23 +6,28 @@ on:
       - main
 
 jobs:
-  example-job:
+  job-1:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
       with:
-         ssh-key: ${{ secrets.PRIVATE_REPOSITORY }}
-         repository: mosama90/one
+        ssh-key: ${{ secrets.PRIVATE_REPOSITORY }}
+        repository: mosama90/one
          
     - name: Rename Source DIR 
       run: |
         mv /home/runner/work/one/one /home/runner/work/Source
 
+  job-2:
+    runs-on: ubuntu-latest
+
+    steps:
     - uses: actions/checkout@v2
       with:
-         repository: omarmoussi/one
+        repository: omarmoussi/one
          
-    - name: LS
+    - name: Rename Destination  DIR 
       run: |
+        mv /home/runner/work/one/one /home/runner/work/Destination
         ls -la
