@@ -1,14 +1,19 @@
-name: Display Date on Main Push
+name: Mirror Changes to mosama90/one
 
 on:
   push:
     branches:
-      - main
+      - main  # Adjust the branch name as needed
 
 jobs:
-  display-date:
+  mirror:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Display Current Date
-      run: echo "The current date is $(date)"
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Mirror changes
+      run: |
+        git remote add mirror https://github.com/mosama90/one.git
+        git push mirror HEAD:main
