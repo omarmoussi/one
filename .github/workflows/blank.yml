@@ -1,22 +1,17 @@
-name: Test
+name: Example Workflow
 
 on:
   push:
     branches:
-      - test/action
+      - main
 
 jobs:
-  build:
-    runs-on: ubuntu-20.04
-    env:
-      ROS_CI_DESKTOP: "`lsb_release -cs`"
-      ROS_DISTRO: noetic
+  example-job:
+    runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-        with:
-          submodules: recursive
-      - name: Download selectedd private repository dependencies
-        run: |
-          mkdir -p ~/catkin_workspace/src
-          cd ~/catkin_workspace/src
-          ssh-agent sh -c 'echo "${{ secrets.PRIVATE_REPOSITORY }}" | ssh-add - && git clone git@github.com:mosama90/two.git'
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Use Secret Token
+      run: echo "My secret token is ${{ secrets.MY_TOKEN }}"
