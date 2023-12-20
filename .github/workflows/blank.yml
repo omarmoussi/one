@@ -18,5 +18,8 @@ jobs:
     - name: Mirror changes
       run: |
         git remote add mirror git@github.com:mosama90/one.git
+        git fetch mirror
+        git merge mirror/main
+        git push origin main
          
  
