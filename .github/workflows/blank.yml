@@ -15,4 +15,4 @@ jobs:
       with:
         owner: 'mosama90'
         repository: 'mosama90/two'
-        access-token: ${{ secrets.GIT }}
+        access-token: ${{ secrets.PRIVATE_REPOSITORY }}
