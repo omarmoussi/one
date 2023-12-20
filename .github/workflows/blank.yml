@@ -18,7 +18,7 @@ jobs:
     - name: Rename Source DIR for Repo 1
       run: |
         mkdir /home/runner/work/source
-        mv -r /home/runner/work/one/one  /home/runner/work/source
+        mv /home/runner/work/one/one  /home/runner/work/source
         ls -la /home/runner/work/source
     - name: Checkout Repository 2
       uses: actions/checkout@v2
@@ -28,7 +28,7 @@ jobs:
     - name: Rename Source DIR for Repo 2
       run: |
         mkdir /home/runner/work/destination
-        mv -r /home/runner/work/one/one/ /home/runner/work/destination
+        mv /home/runner/work/one/one/ /home/runner/work/destination
         ls -la /home/runner/work/destination
         
  
