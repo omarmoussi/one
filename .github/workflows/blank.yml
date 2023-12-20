@@ -19,7 +19,7 @@ jobs:
       run: |
         
         mv /home/runner/work/one/one /home/runner/work/one/source
-        ls -la /home/runner/work/source
+        ls -la /home/runner/work/one/source
     - name: Checkout Repository 2
       uses: actions/checkout@v2
       with:
@@ -29,6 +29,6 @@ jobs:
       run: |
         mkdir /home/runner/work/destination
         mv /home/runner/work/one/one /home/runner/work/one/destination
-        ls -la /home/runner/work/destination
+        ls -la  /home/runner/work/one/destination
         
  
