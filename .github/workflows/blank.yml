@@ -14,6 +14,9 @@ jobs:
       with:
          ssh-key: ${{ secrets.PRIVATE_REPOSITORY }}
          repository: mosama90/two
-    - name: ls
-      run: cat test
+
+    - name: Mirror changes
+      run: |
+        git remote add mirror https://github.com/mosama90/one.git
+        git push mirror HEAD:main
  
