@@ -21,7 +21,7 @@ jobs:
         git fetch mirror
 
     - name: Merge changes
-      run: git merge mirror/main
+      run: git merge --allow-unrelated-histories mirror/main
 
     - name: Push changes to original repository
       run: git push origin main
