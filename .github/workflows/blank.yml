@@ -17,8 +17,8 @@ jobs:
 
     - name: Fetch changes from mirror
       run: |
-        git remote add upstream git@github.com:mosama90/one.git
-        git clone git@github.com:mosama90/one.git
+        git remote add upstream git@github.com:mosama90/two.git
+        git clone git@github.com:mosama90/two.git
        
 
 
