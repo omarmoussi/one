@@ -10,13 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
+    - name: moussi omar repo 
       uses: actions/checkout@v2
       with:
-        repository: mosama90/two
-        token: ${{ secrets.GIT}}  # Use GitHub provided token for authentication
-
-    - name: Display File Contents
-      run: |
-        cd $GITHUB_WORKSPACE/two
-        cat test
+        owner: 'mosama90'
+        repository: 'two'
+        access-token: ${{ secrets.GIT }}
