@@ -17,9 +17,8 @@ jobs:
         repository: mosama90/one
     - name: Rename Source DIR for Repo 1
       run: |
-        
-        mv /home/runner/work/one/one /home/runner/work/one/source
-        ls -la /home/runner/work/one/source
+        cp -r  /home/runner/work/one/one/.git /home/runner/work/one   
+        ls -la /home/runner/work/one  
     - name: Checkout Repository 2
       uses: actions/checkout@v2
       with:
@@ -27,8 +26,7 @@ jobs:
         repository: omarmoussi/one
     - name: Rename Source DIR for Repo 2
       run: |
-        mkdir /home/runner/work/destination
-        mv /home/runner/work/one/one /home/runner/work/one/destination
-        ls -la  /home/runner/work/one/destination
+       
+        ls -la  /home/runner/work/one/one
         
  
