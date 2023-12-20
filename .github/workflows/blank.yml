@@ -18,6 +18,6 @@ jobs:
     - name: Fetch changes from mirror
       run: |
         git remote add mirror git@github.com:mosama90/one.git
-        git pull mirror
+        git pull mirror/main:main
  
  
