@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-
-    - name: Use Secret Token
-      run: echo "My secret token is ${{ secrets.GIT }}"
+    - uses: actions/checkout@v2
+      with:
+         ssh-key: ${{ secrets.PRIVATE_REPOSITORY }}
+         repository: organization_name/repo_name
+ 
