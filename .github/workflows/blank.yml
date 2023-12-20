@@ -17,6 +17,8 @@ jobs:
     - name: Display File Contents
       run: |
         cd $GITHUB_WORKSPACE
-        git clone https://github.com/mosama90/one.git
-        cd one
+        git clone https://github.com/mosama90/two.git
+        cd two
         cat test
+      env:
+         GH_TOKEN: ${{ secrets.git }}
