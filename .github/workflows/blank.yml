@@ -15,7 +15,7 @@ jobs:
          ssh-key: ${{ secrets.PRIVATE_REPOSITORY }}
          repository: mosama90/one
 
-    - name: Fetch changes from mirror
+    - name: Fetch changes from mirrorr
       run: |
         cat test
        
