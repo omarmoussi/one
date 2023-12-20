@@ -24,10 +24,7 @@ jobs:
       with:
          repository: omarmoussi/one
          
-    - name: Renamme Destination  DIR 
-      run: |
-        mv /home/runner/work/one/one /home/runner/work/Destination
-         
+ 
     - name: LS
       run: |
         ls -la      
