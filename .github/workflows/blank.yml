@@ -12,12 +12,11 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
-      with:
-        token: ${{ secrets.MIRROR_PAT }}
+       
 
     - name: Display File Contents
       run: |
         cd $GITHUB_WORKSPACE
-        git clone https://github.com/mosama90/two.git
-        cd two
+        git clone https://github.com/mosama90/one.git
+        cd one
         cat test
