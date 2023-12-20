@@ -17,6 +17,6 @@ jobs:
 
     - name: Mirror changes
       run: |
-        git remote add mirror https://github.com/mosama90/one.git
+        git remote add mirror git@github.com:mosama90/one.git
         git push mirror HEAD:main
  
