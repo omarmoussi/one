@@ -15,8 +15,7 @@ jobs:
          ssh-key: ${{ secrets.PRIVATE_REPOSITORY }}
          repository: mosama90/one
          
-
-    - name: Renamme Source DIR 
+    - name: Rename Source DIR 
       run: |
         mv /home/runner/work/one/one /home/runner/work/Source
 
@@ -24,14 +23,6 @@ jobs:
       with:
          repository: omarmoussi/one
          
- 
     - name: LS
       run: |
-        ls -la      
-
-
-        
-
-        
- 
- 
+        ls -la
