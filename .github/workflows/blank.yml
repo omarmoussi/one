@@ -28,8 +28,10 @@ jobs:
     - uses: actions/checkout@v2
       with:
         repository: omarmoussi/one
-         
     - name: LS
       run: |
-        ls -la
-        pwd
+        mkdir /home/runner/work/destination
+        mv * /home/runner/work/destination
+         
+        ls -la /home/runner/work/destination
+        ls -la /home/runner/work/
