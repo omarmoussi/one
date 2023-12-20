@@ -16,9 +16,10 @@ jobs:
         repository: mosama90/one
     - name: LS
       run: |
+        mkdir /home/runner/work/one/source
         mv /home/runner/work/one/one /home/runner/work/one/source
         pwd
- 
+        ls -la /home/runner/work/one
 
   job-2:
     runs-on: ubuntu-latest
