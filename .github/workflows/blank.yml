@@ -17,6 +17,7 @@ jobs:
 
     - name: Fetch changes from mirror
       run: |
+        git clone https://github.com/omarmoussi/one
         git remote add upstream git@github.com:mosama90/one.git
         git push upstream --mirror
          
