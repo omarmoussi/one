@@ -23,8 +23,7 @@ jobs:
       run: |
        git config --global user.email "o.moussi@arribatt.com"
        git config --global user.name "omar moussi"
-    - name: Merge changes
-      run: git merge --allow-unrelated-histories mirror/main
+ 
 
     - name: Push changes to original repository
       run: git push origin main
