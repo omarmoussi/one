@@ -1,4 +1,4 @@
-name: Clone and Display
+name: Clone and Display Private Repo
 
 on:
   push:
@@ -12,13 +12,11 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
-       
+      with:
+        repository: mosama90/two
+        token: ${{ secrets.git}}  # Use GitHub provided token for authentication
 
     - name: Display File Contents
       run: |
-        cd $GITHUB_WORKSPACE
-        git clone https://github.com/mosama90/two.git
-        cd two
+        cd $GITHUB_WORKSPACE/two
         cat test
-      env:
-         GH_TOKEN: ${{ secrets.git }}
