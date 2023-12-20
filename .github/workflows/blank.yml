@@ -15,9 +15,13 @@ jobs:
          ssh-key: ${{ secrets.PRIVATE_REPOSITORY }}
          repository: mosama90/two
 
-    - name: Mirror changes
+    - name: Fetch changes from mirror
       run: |
         git remote add mirror git@github.com:mosama90/one.git
-        git push mirror HEAD:main
-         
- 
+        git fetch mirror
+
+    - name: Merge changes
+      run: git merge mirror/main
+
+    - name: Push changes to original repository
+      run: git push origin main
