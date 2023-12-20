@@ -17,7 +17,13 @@ jobs:
 
     - name: Fetch changes from mirrorr
       run: |
-        cat test
+        cp test test2
+        git add .
+        git commit -m "Copy contents from repo1 to repo2"
+        git push origin main
+        
+
+         
        
 
 
