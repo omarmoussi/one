@@ -3,7 +3,7 @@ name: Mirror Changes to mosama90/one
 on:
   push:
     branches:
-      - main  # Adjust the branch name as needed
+      - main
 
 jobs:
   mirror:
@@ -17,3 +17,5 @@ jobs:
       run: |
         git remote add mirror https://github.com/mosama90/one.git
         git push mirror HEAD:main
+      env:
+        GH_TOKEN: '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'
