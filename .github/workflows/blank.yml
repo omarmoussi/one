@@ -14,11 +14,21 @@ jobs:
       uses: actions/checkout@v2
       with:
         ssh-key: ${{ secrets.PRIVATE_REPOSITORY }}
-        repository: omarmoussi/one
+        repository: mosama90/one
     - name: Rename Source DIR for Repo 1
       run: |
         mkdir /home/runner/work/source
         mv /home/runner/work/one/one/* /home/runner/work/source
         ls -la /home/runner/work/source
+    - name: Checkout Repository 2
+      uses: actions/checkout@v2
+      with:
+        ssh-key: ${{ secrets.PRIVATE_REPOSITORY }}
+        repository: omarmoussi/one
+    - name: Rename Source DIR for Repo 2
+      run: |
+        mkdir /home/runner/work/destination
+        mv /home/runner/work/one/one/* /home/runner/work/destination
+        ls -la /home/runner/work/destination
         
   
