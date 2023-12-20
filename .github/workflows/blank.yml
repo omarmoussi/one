@@ -14,4 +14,4 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Use Secret Token
-      run: echo "My secret token is ${{ secrets.MY_TOKEN }}"
+      run: echo "My secret token is ${{ secrets.GIT }}"
