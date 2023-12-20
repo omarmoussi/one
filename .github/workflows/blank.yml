@@ -14,10 +14,11 @@ jobs:
       with:
          ssh-key: ${{ secrets.PRIVATE_REPOSITORY }}
          repository: mosama90/one
+         
 
     - name: Fetch changes from mirrorr
       run: |
-        ls -la
+        pwd
         
 
          
