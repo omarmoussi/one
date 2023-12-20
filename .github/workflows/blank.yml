@@ -13,12 +13,11 @@ jobs:
     - uses: actions/checkout@v2
       with:
          ssh-key: ${{ secrets.PRIVATE_REPOSITORY }}
-         repository: mosama90/two
+         repository: mosama90/one
 
     - name: Fetch changes from mirror
       run: |
-        git remote add upstream git@github.com:mosama90/two.git
-        git clone git@github.com:mosama90/two.git
+        cat test
        
 
 
