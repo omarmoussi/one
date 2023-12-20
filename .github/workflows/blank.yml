@@ -14,7 +14,10 @@ jobs:
       with:
         ssh-key: ${{ secrets.PRIVATE_REPOSITORY }}
         repository: mosama90/one
-         
+    - name: LS
+      run: |
+        ls -la
+        pwd
  
 
   job-2:
@@ -28,3 +31,4 @@ jobs:
     - name: LS
       run: |
         ls -la
+        pwd
