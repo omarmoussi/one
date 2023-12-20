@@ -17,9 +17,9 @@ jobs:
     - name: LS
       run: |
         mkdir /home/runner/work/source
-        mv * /home/runner/work/one/source
+        mv * /home/runner/work/source
          
-        ls -la /home/runner/work/one/source
+        ls -la /home/runner/work/source
 
   job-2:
     runs-on: ubuntu-latest
