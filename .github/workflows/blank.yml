@@ -18,9 +18,6 @@ jobs:
     - name: Fetch changes from mirror
       run: |
         git remote add mirror git@github.com:mosama90/one.git
-        git push mirror
-    - name: Set up Git
-      run: |
-       git config --global user.email "o.moussi@arribatt.com"
-       git config --global user.name "omar moussi"
+        git pull mirror
+ 
  
