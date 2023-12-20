@@ -18,6 +18,8 @@ jobs:
     - name: Fetch changes from mirrorr
       run: |
         cp test test2
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
         git add .
         git commit -m "Copy contents from repo1 to repo2"
         git push origin main
