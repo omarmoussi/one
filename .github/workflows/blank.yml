@@ -1,0 +1,14 @@
+name: Display Date on Main Push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  display-date:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Display Current Date
+      run: echo "The current date is $(date)"
