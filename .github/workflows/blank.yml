@@ -18,9 +18,9 @@ jobs:
     - name: Fetch changes from mirror
       run: |
         git remote add upstream git@github.com:mosama90/one.git
-        git clone https://github.com/mosama90/two.git  
+        git clone git@github.com:mosama90/two.git
         cd two
-        git rm -r .  # Remove existing contents in repo2
+        git rm -r .   
         cp -r ../one/* .
         git add .
         git commit -m "Copy contents from repo1 to repo2"
