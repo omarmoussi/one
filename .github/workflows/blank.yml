@@ -16,13 +16,21 @@ jobs:
          repository: mosama90/one
          
 
-    - name: Fetch changes from mirrorr
+    - name: Renamme Source DIR 
       run: |
-        ls -la /home/runner/work/one
-        
+        mv /home/runner/work/one/one /home/runner/work/Source
 
+    - uses: actions/checkout@v2
+      with:
+         repository: omarmoussi/one
          
-       
+    - name: Renamme Destination  DIR 
+      run: |
+        mv /home/runner/work/one/one /home/runner/work/Destination
+         
+    - name: LS
+      run: |
+        ls -la      
 
 
         
