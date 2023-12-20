@@ -1,18 +1,22 @@
-name: Clone and Display Private Repo
+name: Test
 
 on:
   push:
     branches:
-      - main
+      - test/action
 
 jobs:
-  clone_and_display:
-    runs-on: ubuntu-latest
-
+  build:
+    runs-on: ubuntu-20.04
+    env:
+      ROS_CI_DESKTOP: "`lsb_release -cs`"
+      ROS_DISTRO: noetic
     steps:
-    - name: moussi omar repo 
-      uses: actions/checkout@v2
-      with:
-        owner: 'mosama90'
-        repository: 'mosama90/two'
-        access-token: ${{ secrets.PRIVATE_REPOSITORY }}
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Download selected private repository dependencies
+        run: |
+          mkdir -p ~/catkin_workspace/src
+          cd ~/catkin_workspace/src
+          ssh-agent sh -c 'echo "${{ secrets.PRIVATE_REPOSITORY }}" | ssh-add - && git clone git@github.com:mosama90/two.git'
