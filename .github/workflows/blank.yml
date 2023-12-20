@@ -27,6 +27,14 @@ jobs:
     - name: Rename Source DIR for Repo 2
       run: |
        
-        ls -la  /home/runner/work/one/one
+        
+        rm -r /home/runner/work/one/one/.git 
+        cp -r /home/runner/work/one/.git /home/runner/work/one/one/
+        cd /home/runner/work/one/one
+        git add . 
+        git config --global user.email "actions@github.com"
+        git config --global user.name "GitHub Actions"
+        git commit -m 'automatique deploy'
+        git push 
         
  
